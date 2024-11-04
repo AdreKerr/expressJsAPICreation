@@ -7,9 +7,7 @@ const express = require('express');
 const router = express.Router();
 
 
-
-router.use('/restaurants', require('./api/restroutes'))
-
-router.use('/diningtype', require('./api/typeroutes'));
+router.use('/info', require('./api/animaroutes'));
+router.use('/location', require('./api/stateroutes'))
 
 module.exports = router;

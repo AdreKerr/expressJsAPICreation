@@ -2,7 +2,7 @@
 const pool = require('../config/dbconfig');
 
 
-class RestDao {
+class AnimalDao {
 
 
 
@@ -11,20 +11,19 @@ class RestDao {
     }
 
 
-    findAll(req, res) {
-        pool.query('SELECT * from records', (err, rows) => {
+    findAllInfo(req, res) {
+        pool.query('SELECT * from animal_info', (err, rows) => {
             console.log(rows)
 
             res.send(rows);
         })
     }
-
-    findIdOne(req, res) {
-        pool.query('SELECT * from records WHERE id = 1', (err, rows) => {
+    findIdOne(req,res){
+        pool.query('SELECT * from animal_info WHERE id = 1',(err, rows) => {
             console.log(rows)
             res.send(rows)
         })
     }
 }
 
-module.exports = RestDao;
+module.exports = AnimalDao;

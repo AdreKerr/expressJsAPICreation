@@ -1,4 +1,4 @@
-const daoClass = require('../../dao/typedao');
+const daoClass = require('../../dao/statedao');
 
 
 const dao = new daoClass();

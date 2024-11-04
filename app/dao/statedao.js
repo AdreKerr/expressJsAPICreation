@@ -2,7 +2,7 @@ const pool = require('../config/dbconfig');
 
 
 
-class TypeDao {
+class StateDao {
 
 
 
@@ -11,7 +11,7 @@ class TypeDao {
     }
 
     findAll(req, res) {
-        pool.query('SELECT * FROM dining_type', (err, rows) => {
+        pool.query('SELECT * FROM states', (err, rows) => {
             console.log(rows);
             res.send(rows);
         })
@@ -19,4 +19,4 @@ class TypeDao {
 
 }
 
-module.exports = TypeDao;
+module.exports = StateDao;
